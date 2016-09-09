@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+	<!-- FAISAL -->
+	<style>
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body {
+	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: transparent;
+	color: #2e2e2e;
+}
+h1, h2 {
+	font-family: "Signika", sans-serif;
+	font-weight: 600;
+}
+h1 {
+	font-size: 36px;
+	line-height: 46px;
+	color: #e0e0e0;
+}
+h2 {
+	font-size: 24px;
+	line-height: 33px;
+	margin-bottom: -20px;
+}
+p {
+	margin: 20px 0;
+}
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+.fixed-nav-bar {
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.6);
+}
+.content {
+	position: relative;
+	background: #464646 url(59H-from-gratisography.jpg) no-repeat center center fixed;
+	background-size: cover;
+ }
+.description, .some-related-articles {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+.description {
+	padding-top: 100px;
+	min-height: 250px;
+	text-align: center;
+}
+.some-related-articles {
+	color: #747474;
+}
+.some-related-articles h1 {
+	color: #384e56;
+	margin-top: 60px;
+	text-transform: uppercase;
+}
+.some-related-articles h2 a:link, .some-related-articles h2 a:visited	{
+	color: #464646;
+	transition: color 0.1s ease;
+}
+.some-related-articles h2 a:hover {
+	color: #000000;
+	transition: color 0.3s ease;
+}
+.summary {
+	color: #d9dee2;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+.button, .button:visited, .button-dark {
+	display: inline-block;
+	max-width: 200px;
+	margin: 50px 10px 30px 10px;
+	padding: 10px;
+	font-family: "Signika", sans-serif;
+	color: #ffffff;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 3px;
+	text-transform: capitalize;
+	text-align: center;
+	transition: all 0.1s ease;
+}
+.button-dark, .button-dark:visited {
+	margin: 20px 10px 30px 0;
+	color: #464646;
+	border-color: #464646;
+}
+.button:hover, .button-dark:hover {
+	transition: all 0.3s ease;
+}
+.button:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.button-dark:hover {
+	color: #ffffff;
+	background-color: rgba(70, 70, 70, 0.9);
+}
+.fixed-nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 50px;
+	background-color: #00a087;
+}
+.content {
+	margin-top: 20px;
+}
+.fixed-nav-bar li, .fixed-nav-bar a { 
+	height: 50px;
+	line-height: 50px;
+}
+.menu {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+.menu a, .menu a:visited {
+	color: #ffffff;
+}
+.menu a:hover, .menu a:target {
+	color: #ebebeb;
+}
+.menu-items {
+	display: inline-block;
+}
+.sitename {
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+a.sitename, a:visited.sitename {
+	color: #e0e0e0;
+}
+.menu-items li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.menu-items a {
+	text-decoration: none;
+}
+.show, .hide {
+	display: none;
+	padding-left: 15px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center left;
+	color: #dde1e2;
+}
+.show {
+	background-image: url(assets/down-arrow-icon.png);
+}
+.hide {
+	background-image: url(assets/up-arrow-icon.png);
+}
+@media only screen and (max-width: 800px) {
+	.menu { 
+		position: relative;
+		width: 100%;
+	}
+	.sitename {
+		position: absolute;
+		top: 0;
+		left: 15px;
+		margin-left: 0px;
+	}
+	.menu-items {
+		display: none; 
+		width: 100%;
+		margin-top: 50px;
+		background-color: #008378;
+	}
+	.menu-items li {
+		display: block;
+		text-align: center;
+	}
+	.show, .hide {	
+		position: absolute;
+		top: 0;
+		right: 15px;
+	}
+	.show {
+		display: inline-block;
+	}
+	.hide {
+		display: none;
+	}
+	#menu:target .show {
+		display: none;
+	}
+	#menu:target .hide, #menu:target .menu-items {
+		display: inline-block;
+	}
+}
+@media only screen and (max-width: 220px) {
+	.sitename, .show, .hide {
+		font-size: 14px;
+	}
+}
+nav {display:block}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}@media print {*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}a[href^="javascript:"]:after,a[href^="#"]:after{content:""}@page{margin:2cm .5cm}}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.428571429;color:#333;background-color:#fff}a{color:#428bca;text-decoration:none}a:hover,a:focus{color:#2a6496;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}ul {margin-top:0;margin-bottom:10px}ul ul {margin-bottom:0}.row{margin-right:-15px;margin-left:-15px}.row:before,.row:after{display:table;content:" "}.row:after{clear:both}.row:before,.row:after{display:table;content:" "}.row:after{clear:both}.col-md-2,.col-md-6,.col-md-10,.col-md-12 {position:relative;min-height:1px;padding-right:15px;padding-left:15px}@media(min-width:992px) {.col-md-2,.col-md-6,.col-md-10,.col-md-12{float:left}.col-md-12{width:100%}.col-md-10{width:83.33333333333334%}.col-md-6{width:50%}.col-md-2{width:16.666666666666664%}}@font-face{font-family:'Glyphicons Halflings';src:url("../fonts/glyphicons-halflings-regular.eot");src:url("../fonts/glyphicons-halflings-regular.eot#iefix") format('embedded-opentype'),url("../fonts/glyphicons-halflings-regular.woff") format('woff'),url("../fonts/glyphicons-halflings-regular.ttf") format('truetype'),url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format('svg')}.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';-webkit-font-smoothing:antialiased;font-style:normal;font-weight:normal;line-height:1;-moz-osx-font-smoothing:grayscale}.glyphicon:empty{width:1em}.glyphicon-cog:before{content:"\e019"}.glyphicon-home:before{content:"\e021"}.glyphicon-download-alt:before{content:"\e025"}.glyphicon-refresh:before{content:"\e031"}.glyphicon-book:before{content:"\e043"}.glyphicon-list:before{content:"\e056"}.glyphicon-phone:before{content:"\e145"}.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav:before,.nav:after{display:table;content:" "}.nav:after{clear:both}.nav:before,.nav:after{display:table;content:" "}.nav:after{clear:both}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.nav>li>a:hover,.nav>li>a:focus{text-decoration:none;background-color:#eee}@-webkit-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}.panel-body{padding:15px}.panel-body:before,.panel-body:after{display:table;content:" "}.panel-body:after{clear:both}.panel-body:before,.panel-body:after{display:table;content:" "}.panel-body:after{clear:both}.panel-heading{padding:10px 15px;border-bottom:1px solid transparent;border-top-right-radius:3px;border-top-left-radius:3px}.panel-title{margin-top:0;margin-bottom:0;font-size:16px;color:inherit}.panel-warning{border-color:#faebcc}.panel-warning>.panel-heading{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}.pull-right{float:right!important}@-ms-viewport{width:device-width}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+  position: relative;
+  margin: 0px;
+  font-size: 12px;
+  padding: 0px;
+}
+.page-content > .row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-top: 30px;
+}
+.content-box, .content-box-large {
+   margin-bottom:30px;
+   background:#fff;
+   border-radius:10px;
+   padding:10px;
+   border-left:1px solid #eee;
+   border-top:1px solid #eee;
+   border-right:2px solid #eee;
+   border-bottom:2px solid #eee; 
+}
+.content-box-large {
+  padding: 20px;
+}
+.box-with-header {
+  border-top: none;
+  border-top-left-radius:0px;
+  border-top-right-radius:0px;
+}
+.content-box-header {
+  min-height: 40px;
+   font-size: 16px;
+   background:#f5f5f5;
+   border-top-left-radius:5px;
+   border-top-right-radius:5px;
+   padding:10px;
+   border-left:1px solid #eee;
+   border-top:1px solid #eee;
+   border-right:2px solid #eee;
+}
+.content-box-header:after {
+  clear:both;
+}
+.sidebar ul.nav, .sidebar ul.nav ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.sidebar ul.nav ul {
+   margin:0px;
+   padding:0px;
+   display:none;
+}
+.sidebar .nav > li {
+	margin: 0;
+   border-bottom:1px dashed #eee;
+}
+.sidebar .nav > li:last-child{
+   border-bottom:0px;
+}
+.sidebar .nav > li li {
+	margin: 0;
+}
+.sidebar .nav > li li a{
+   padding-left:25px;
+}
+.sidebar .nav > li > a {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 15px 15px;
+	color: #999;
+	display: block;
+   font-weight:bold;
+   background:none;
+	text-decoration: none;
+   border-top:0px;
+   font-weight:bold;
+}
+.sidebar .nav > li > a > i{
+   margin-right:5px;
+}
+.sidebar .nav > li > ul > li > a {
+	font-size: 13px;
+	line-height: 20px;
+	padding: 8px 10px 8px 40px;
+	color: #999;
+   background:#fff;
+	display: block;
+	text-decoration: none;
+   border-top:0px;
+   font-weight:bold;
+}
+.sidebar .nav > li > ul > li > a:hover{
+   background:#fff;
+   color:#555;
+   border-bottom:0px;
+}
+.sidebar .nav li a:hover, .sidebar .nav li.current > a {
+	background: #fff;
+	color: #555;
+   border-bottom:0px;
+}
+.sidebar .nav a .caret {
+	float: right;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: top;
+	border-top: 4px solid #aaa;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: "";
+   margin-top: 8px;
+	margin-left: 2px;
+}
+body {
+  background-color: #eff0f3;
+}
+.panel-heading>.panel-title, .content-box-header .panel-title {
+    float: left;
+    padding: 10px 15px;
+    padding-top: 0px;
+}
+.panel-heading>.panel-options, .content-box-header .panel-options {
+    float: right;
+    padding-right: 15px;
+}
+.panel-heading>.panel-options>a, .content-box-header .panel-options>a {
+    margin-top: 10px;
+}
+.panel-body {
+  clear:both;
+}
+@media (max-width: 991px) {
+   .sidebar {
+      margin-bottom:30px;
+      width:100%;
+      float:none;
+      position:relative;
+   }}
+</style>
+  </head>
+  <body>
+<nav class="fixed-nav-bar">
+	<div id="menu" class="menu">
+		<a class="sitename" href="#home">InSIS</a>
+		<a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
+		<ul class="menu-items">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#academeic">Academic</a></li>
+			<li><a href="#installation">Installation</a></li>
+		</ul>
+	</div>
+</nav>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li><a href="calendar.html"><i class="glyphicon glyphicon-book"></i> About</a></li>
+                    <li><a href="stats.html"><i class="glyphicon glyphicon-phone"></i> Contact</a></li>
+                    <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Academic</a></li>
+                    <li><a href="buttons.html"><i class="glyphicon glyphicon-download-alt"></i>Installation</a></li>
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Pages
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Signup</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+		  	<div class="row">
+		  		<div class="col-md-6">
+		  			<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title">Important News</div>
+							
+							<div class="panel-options">
+								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+							</div>
+						</div>
+		  				<div class="panel-body">
+							News goes here LOL.
+				  			<br /><br />
+							<br /><br />
+		  				</div>
+		  			</div>
+		  		</div>
+
+		  		<div class="col-md-6">
+		  			<div class="row">
+		  				<div class="col-md-12">
+		  					<div class="content-box-header">
+			  					<div class="panel-title">Student Reports/Concerns</div>
+								
+								<div class="panel-options">
+									<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+									<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+								</div>
+				  			</div>
+				  			<div class="content-box-large box-with-header">
+				  				Reports go here m8.
+								<br /><br />
+							</div>
+		  				</div>
+		  			</div>
+		  			<div class="row">
+		  				<div class="col-md-12">
+		  					<div class="content-box-header">
+			  					<div class="panel-title">Recent Financial Transactions</div>
+								
+								<div class="panel-options">
+									<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+									<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+								</div>
+				  			</div>
+				  			<div class="content-box-large box-with-header">
+				  				Stop spending all our money!!
+								<br /><br />
+							</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="row">
+		  		<div class="col-md-12 panel-warning">
+		  			<div class="content-box-header panel-heading">
+	  					<div class="panel-title ">Event Schedule</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+  </body>
+</html>
