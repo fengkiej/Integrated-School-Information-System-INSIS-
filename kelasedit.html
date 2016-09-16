@@ -1,0 +1,148 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="AdminLTE.css">
+
+	<style>
+		@font-face {
+			font-family: 'Material Icons';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+		}
+
+		.material-icons {
+			font-family: 'Material Icons';
+			font-weight: normal;
+			font-style: normal;
+			font-size: 18px; /*may be changed if you need bigger/smaller font*/
+			vertical-align: middle;
+			line-height: 0;
+			letter-spacing: normal;
+			text-transform: none;
+			display: inline;
+			white-space: nowrap;
+			word-wrap: normal;
+			direction: ltr;
+			-webkit-font-feature-settings: 'liga';
+			-webkit-font-smoothing: antialiased;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 margin">
+		<div class="form-group">
+
+			<div class="box box-success">
+				<div class="box-header with-border">
+					<h3 class="box-title">Detail Kelas</h3>
+				</div>
+				<div class="box-body">
+					<label for="namakelas">Nama Kelas</label>
+					<input type="text" class="form-control" id="namakelas" placeholder="Nama kelas">
+					<div class="row">
+						<div class="col-md-3">
+							<label for="tingkat">Tingkat</label>
+							<input type="text" class="form-control" id="tingkat" placeholder="Tingkat">
+						</div>
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<label for="thnajaran">Tahun ajaran</label>
+							<select class="form-control" id="thnajaran" placeholder="Tahun ajaran">
+								<option>2016/2017</option>
+								<option>2015/2016</option>
+								<option>2014/2015</option>
+								<option>2013/2014</option>
+							</select>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Kelas aktif
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="box box-success">
+				<div class="box-header with-border">
+					<h3 class="box-title">Mata Pelajaran</h3>
+				</div>
+				<div class="box-body">
+					<div class="input-group">
+						<input type="text" class="form-control" id="tambahpel" placeholder="Tambah mata pelajaran">
+						<div class="input-group-btn">
+							<button class="btn btn-success" id="tambahbtn" onclick="addElem()" >+ Tambah</button>
+						</div>
+					</div>
+					<div id="matpels" style="margin-top: 10px; height: 150px; overflow-y: scroll;">
+						<div class="info-box">
+							<button onclick="delElem(this)" class="btn btn-danger btn-sm pull-right" style="margin-right: 10px;">Hapus</button>
+							<div class="info-box-content">
+								<span class="info-box-text">Matematika</span>
+							</div>
+						</div>
+						<div class="info-box">
+							<button onclick="delElem(this)" class="btn btn-danger btn-sm pull-right" style="margin-right: 10px;">Hapus</button>
+							<div class="info-box-content">
+								<span class="info-box-text">Bahasa Inggris </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-success btn pull-right" style="margin-right: 10px;">Simpan</button>
+	</div>
+	<div class="col-md-3"></div>
+	<script>
+		function addElem() {
+			var box = document.createElement("div");
+			box.classList.add("info-box");
+
+			var boxContent = document.createElement("div");
+			boxContent.classList.add("info-box-content");
+
+			var hapusBtn = document.createElement("button");
+			hapusBtn.classList.add("btn");
+			hapusBtn.classList.add("btn-danger");
+			hapusBtn.classList.add("btn-sm");
+			hapusBtn.classList.add("pull-right");
+			hapusBtn.setAttribute("onclick", "delElem(this)");
+			hapusBtn.setAttribute("style", "margin-right: 10px");
+
+			var btnTxt = document.createTextNode("Hapus");
+
+			var txtSpan = document.createElement("span");
+			txtSpan.classList.add("info-box-text");
+
+			var txtInput = document.getElementById("tambahpel");
+			var text = document.createTextNode(txtInput.value);
+			txtInput.value = "";
+
+			hapusBtn.appendChild(btnTxt);
+			txtSpan.appendChild(text);
+
+			boxContent.appendChild(txtSpan);
+			box.appendChild(hapusBtn);
+			box.appendChild(boxContent);
+
+			document.getElementById("matpels").appendChild(box);
+		}
+
+		document.getElementById("tambahpel").onkeydown = function(e){
+			if(e.keyCode == 13){
+				addElem();
+			}
+		}
+
+		function delElem(e) {
+			var pr = e.parentNode; pr.parentNode.removeChild(pr);
+		}
+	</script>
+</body> 
+</html>

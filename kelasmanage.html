@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="AdminLTE.css">
+
+  <style>
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 18px; /*may be changed if you need bigger/smaller font*/
+      vertical-align: middle;
+      line-height: 0;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="col-md-3"></div>
+  <div class="col-md-6 margin">
+    <div class="box box-danger">
+      <div class="box-header">
+        <h3 class="box-title">Kelas</h3>
+        <div class="box-tools">
+          <div class="row">
+          <select style="margin-right:5px">
+            <option>tampilkan semua</option>
+            <option>2016/2017</option>
+            <option>2015/2016</option>
+            <option>2014/2015</option>
+            <option>2013/2014</option>
+          </select>
+          <a class="btn-sm btn-success no-margin pull-right">
+            <i class="material-icons">add</i> <span class="text-center">Tambah kelas baru</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box-body no-padding">
+    <table class="table">
+      <tbody><tr>
+        <th style="width: 10px">#</th>
+        <th style="width: 20%">Kelas</th>
+        <th style="width: 20%">Tingkat</th>
+        <th style="width: 35%">Tahun Ajaran</th>
+        <th style="width: 25%">Status</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>A</td>
+        <td>12</td>
+        <td>2016/2017</td>
+        <td><a class="btn btn-sm btn-success">Aktif</a>
+          <a class="btn btn-sm btn-warning">Ubah</a></td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>B</td>
+          <td>12</td>
+          <td>2016/2017</td>
+          <td><a class="btn btn-sm btn-success">Aktif</a>
+            <a class="btn btn-sm btn-warning">Ubah</a></td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>C</td>
+            <td>12</td>
+            <td>2016/2017</td>
+            <td><a class="btn btn-sm btn-success">Aktif</a>
+              <a class="btn btn-sm btn-warning">Ubah</a></td>
+            </tr>
+            <tr>
+              <td colspan=5>
+                <ul class="pagination pagination-sm no-margin pull-left">
+                  <li><a href="#"><<</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">>></a></li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <div class="col-md-3"></div>
+</body> 
+</html>
