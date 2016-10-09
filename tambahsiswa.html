@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tambah siswa</title>
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="AdminLTE.css">
+
+    <style>
+      @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+      }
+
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 18px; /*may be changed if you need bigger/smaller font*/
+        vertical-align: middle;
+        line-height: 0;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="col-md-3"></div>
+    <div class="col-md-6 margin">
+      <div class="form-group">
+
+        <div class="box box-success">
+          <div class="box-header with-border">
+            <h3 class="box-title">Data Siswa</h3>
+          </div>
+          <div class="box-body">
+            <label for="namapanjang">Nama Panjang</label>
+            <input type="text" class="form-control" id="namapanjang" placeholder="Nama Panjang">
+            <label for="namapanggilan">Nama Panggilan</label>
+            <input type="text" class="form-control" id="namapanggilan" placeholder="Nama Panggilan">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="tempatlahir">Tempat lahir</label>
+                <input type="text" class="form-control" id="tempatlahir" placeholder="Tempat Lahir">
+              </div>
+              <div class="col-md-6">
+                <label for="tanggallahir">Tanggal Lahir</label>
+                <input type="date" class="form-control" id="tanggallahir" placeholder="Tanggal Lahir">
+               </div>
+           </div>
+           <label for="alamat">Alamat</label>
+           <input type="text" class="form-control" id="alamat" placeholder="alamat">
+           <div class="row">
+             <div class="col-md-6">
+               <label for="hobi">Hobi</label>
+               <form>
+                 <input type="checkbox" name="hobi" value="renang"> Renang <br>
+                 <input type="checkbox" name="hobi" value="musik"> Musik <br>
+                 <input type="checkbox" name="hobi" value="membaca"> Membaca <br>
+                 <input type="checkbox" name="hobi" value="olahraga"> Olahraga <br>
+                 <input type="checkbox" name="hobi" value="other"> <input type="text" placeholder="lainnya">
+               </form>
+           </div>
+
+           <div class="col-md-6">
+             <label for="agama">Agama</label>
+             <form>
+               <input type="radio" name="agama" value="islam"> Islam <br>
+               <input type="radio" name="agama" value="kristen"> Kristen <br>
+               <input type="radio" name="agama" value="hindhu"> Hindhu <br>
+               <input type="radio" name="agama" value="budha"> Budha <br>
+               <input type="radio" name="agama" value="islam"> <input type="text" id="agama" placeholder="lainnya">
+          </div>
+          </div>
+          <label for="email">E-mail</label>
+          <input type="text" class="form-control" id="email" placeholder="email">
+        </div>
+      </div>
+      <button class="btn btn-success btn pull-right" style="margin-right: 10px;">+ Tambah</button>
+    </div>
+  </body>
+</html>
